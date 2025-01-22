@@ -1,2 +1,2 @@
-export { default as InfiniteScrollerView } from './InfiniteScrollerViewNativeComponent';
-export * from './InfiniteScrollerViewNativeComponent';
+import InfiniteScrollerList from './components/InfiniteScrollerList';
+export default InfiniteScrollerList;

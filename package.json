@@ -1,7 +1,7 @@
 {
   "name": "react-native-infinite-scroller",
   "version": "0.1.0",
-  "description": "A React Native component designed to handle infinite scrolling with ease. InfiniteScrollList automatically loads more content as users scroll to the bottom, providing a seamless and efficient way to display large datasets. Ideal for apps that need to display lists of items with dynamic content loading, this component offers:Infinite Scrolling: Automatically load more data as the user scrolls down.Lazy Loading: Only fetch content when it's required, optimizing performance.Customizable: Easily adjust thresholds, loading indicators, and more.Efficient: Handles large datasets with minimal performance overhead.Perfect for creating apps with long lists of data such as feeds, chat histories, product listings, and more.",
+  "description": "A React Native component for Lazy loading / Infinite scrolling.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",

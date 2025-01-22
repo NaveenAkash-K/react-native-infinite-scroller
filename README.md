@@ -66,6 +66,8 @@ export default App;
 
 ## Props
 
+Since InfiniteScrollerList internally uses `FlatList`, it automatically supports all `FlatList` props. Below are the specific props that can be passed to `InfiniteScrollerList`:
+
 | Prop Name                    | Type                 | Default Value                                                              | Description                                                                        |
 |------------------------------|----------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | `isLoading`                  | `boolean`            | `false`                                                                    | Indicates if the component is loading data.                                        |
@@ -94,25 +96,6 @@ You can customize the fallback text, loader, and end-of-list message styles by p
     // other props
 />
 ```
-
-## Methods
-
-### `isCloseToBottom`
-A helper function to determine if the user has scrolled near the bottom of the list:
-
-```typescript
-const isCloseToBottom = (
-    { layoutMeasurement, contentOffset, contentSize }: NativeScrollEvent,
-    triggerThreshold: number = 0
-) => {
-    return (
-        layoutMeasurement.height + contentOffset.y >=
-        contentSize.height - triggerThreshold
-    );
-};
-```
-
-This function is used internally to detect when to trigger the `onFetchTrigger` callback.
 
 ## Styling
 

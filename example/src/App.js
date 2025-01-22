@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import InfiniteScrollerList from 'react-native-infinite-scroller';
+import { InfiniteScrollerList } from 'react-native-infinite-scroller';
 
 const App = () => {
-  const [data, setData] = useState<number[]>([]);
+  const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const totalLength = 50;
 

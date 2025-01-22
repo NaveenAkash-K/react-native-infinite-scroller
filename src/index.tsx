@@ -1,2 +1,1 @@
-import InfiniteScrollerList from './components/InfiniteScrollerList';
-export default InfiniteScrollerList;
+export { default as InfiniteScrollerList } from './components/InfiniteScrollerList';

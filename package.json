@@ -1,6 +1,6 @@
 {
   "name": "react-native-infinite-scroller",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React Native component for Lazy loading / Infinite scrolling.",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
@@ -20,21 +20,11 @@
   "files": [
     "src",
     "lib",
-    "android",
-    "ios",
-    "cpp",
     "*.podspec",
     "react-native.config.js",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
-    "!**/.*"
+    "android/src",
+    "ios/**/*.h",
+    "ios/**/*.mm"
   ],
   "scripts": {
     "example": "yarn workspace react-native-infinite-scroller-example",

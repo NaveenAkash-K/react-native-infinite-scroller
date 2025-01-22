@@ -10,7 +10,7 @@ import type { InfiniteScrollerListProps } from '../types/InfiniteScrollerListPro
 
 const isCloseToBottom = (
   { layoutMeasurement, contentOffset, contentSize }: NativeScrollEvent,
-  triggerThreshold: number = 0
+  triggerThreshold: number
 ) => {
   return (
     layoutMeasurement.height + contentOffset.y >=
@@ -19,20 +19,24 @@ const isCloseToBottom = (
 };
 
 /**
- * @param data
- * @param isLoading
- * @param triggerThreshold
- * @param onFetchTrigger
- * @param totalLength
- * @param fallbackTextOnEmptyData
- * @param customLoader
- * @param fallbackTextContainerStyle
- * @param fallbackTextStyle
- * @param endOfListMessage
- * @param endOfListMessageStyle
- * @param restFlatListProps
- * @constructor
+ * A component to display a list with Lazy Loading / Infinite Scrolling functionality.
+ *
+ * @template T - Type of the items in the data array.
+ * @param {T[]} data - The data to be displayed in the list.
+ * @param {boolean} [isLoading=false] - Indicates if data is being loaded.
+ * @param {number} [triggerThreshold=100] - Threshold to trigger fetching more data.
+ * @param {Function} onFetchTrigger - Function to call when the threshold is reached.
+ * @param {number} totalLength - The total length of data available.
+ * @param {string} [fallbackTextOnEmptyData='No data available.'] - Text to display when no data is available.
+ * @param {React.ReactNode} [customLoader=<ActivityIndicator size="large" />] - Custom loader to show while loading.
+ * @param {object} [fallbackTextContainerStyle={}] - Custom styles for the fallback container.
+ * @param {object} [fallbackTextStyle={}] - Custom styles for the fallback text.
+ * @param {string} [endOfListMessage='Page End Reached'] - Message to show at the end of the list.
+ * @param {object} [endOfListMessageStyle={}] - Custom styles for the end of list message.
+ * @param {FlatListProps<T>} [restFlatListProps] - Any other props for FlatList.
+ * @returns {JSX.Element} - The rendered component.
  */
+
 const InfiniteScrollerList = <T,>({
   data,
   isLoading = false,
